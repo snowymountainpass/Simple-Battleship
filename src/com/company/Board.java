@@ -6,10 +6,10 @@ public class Board {
     private int sizeY;
     Square[][] matrix;
 
-    public Board(int sizeX, int sizeY, Square[][] matrix) {
+    public Board(int sizeX, int sizeY) {
         this.sizeX = sizeX;
         this.sizeY = sizeY;
-        this.matrix = matrix;
+        fillBoard(sizeX,sizeY);
     }
 
     public int getSizeX() {
