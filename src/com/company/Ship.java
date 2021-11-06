@@ -16,7 +16,7 @@ public class Ship {
         return NewShip;
     }
 
-    public ShipType shipType() {
+    public ShipType getShipType() {
         return shipType;
     }
 
