@@ -111,34 +111,37 @@ public class Display {
     }
 
     public void printBoard(Board board){
-        System.out.println("  ");
+        System.out.print("  ");
         for(int i=0;i< board.getSizeX();i++){
             if(i<10){
-                System.out.println(i+"  ");
+                System.out.print(i+"  ");
             }else {
-                System.out.println(i+" ");
+                System.out.print(i+" ");
             }
         }
         System.out.println();
         for(int row=0;row<board.getSizeX();row++){
             if (row<10){
-                System.out.println(row+"  ");
+                System.out.print(row+"  ");
             }else {
-                System.out.println(row+" ");
+                System.out.print(row+" ");
             }
             for(int col=0;col<board.getSizeY();col++){
                 switch (board.getSquare(row,col).getCharacter()){
                     case 'O':
-                        System.out.println(BLUE_BACKGROUND + " " + RESET + " " );
+                        System.out.print(BLUE_BACKGROUND + "  " + RESET + " " );
                         break;
                     case 'H':
-                        System.out.println(RED_BACKGROUND + " " + RESET + " " );
+                        System.out.print(RED_BACKGROUND + "  " + RESET + " " );
                         break;
                     case 'S':
-                        System.out.println(YELLOW_BACKGROUND + " " + RESET + " " );
+                        System.out.print(YELLOW_BACKGROUND + "  " + RESET + " " );
                         break;
                     case 'M':
-                        System.out.println(BLACK_BACKGROUND + " " + RESET + " " );
+                        System.out.print(BLACK_BACKGROUND + "  " + RESET + " " );
+                        break;
+                    case 'E':
+                        System.out.print(WHITE_BACKGROUND + "  " + RESET + " " );
                         break;
                 }
             }
